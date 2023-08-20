@@ -16,7 +16,7 @@ import mlflow.sklearn
 def main(args):
     # TO DO: enable autologging
 
-    mlflow.start_run()       
+    mlflow.start_run()
 
     # read data
     df = get_csvs_df(args.training_data)
@@ -34,9 +34,8 @@ def main(args):
     # Log metrics or other information
     mlflow.log_metric('accuracy', accuracy)
 
-    # End run 
+    # End run
     mlflow.end_run()
-
 
 
 def get_csvs_df(path):
@@ -52,7 +51,6 @@ def get_csvs_df(path):
 def split_data(df, test_size=0.2, random_state=None):
     """
     Split the data into training and testing sets.
-
  
     """
     features = df.drop(columns=["Diabetic"])
@@ -84,6 +82,7 @@ def parse_args():
 
 # run script
 if __name__ == "__main__":
+    
     # add space in logs
     print("\n\n")
     print("*" * 60)
