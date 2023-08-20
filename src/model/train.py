@@ -52,18 +52,8 @@ def get_csvs_df(path):
 def split_data(df, test_size=0.2, random_state=None):
     """
     Split the data into training and testing sets.
-    
-    Parameters:
-        X (array-like): Features or input data.
-        y (array-like): Target variable or labels.
-        test_size (float): The proportion of the dataset to include in the test split.
-        random_state (int or RandomState instance): Controls the shuffling applied to the data before splitting.
-    
-    Returns:
-        X_train (array-like): Training features.
-        X_test (array-like): Testing features.
-        y_train (array-like): Training target variable.
-        y_test (array-like): Testing target variable.
+
+ 
     """
     features = df.drop(columns=["Diabetic"])
 
